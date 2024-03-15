@@ -40,13 +40,13 @@
                         </a>
                     </li>
                     <div class="order-1 flex-1 justify-center items-center space-y-5 md:flex md:space-x-6 md:space-y-0">
-                        <li class="text-gray-500 hover:text-indigo-600">
+                        <li class="text-gray-500 hover:text-black">
                             <a href="javascript:void(0)">Início</a>
                         </li>
-                        <li class="text-gray-500 hover:text-indigo-600">
+                        <li class="text-gray-500 hover:text-black">
                             <a href="javascript:void(0)">Sobre</a>
                         </li>
-                        <li class="text-gray-500 hover:text-indigo-600">
+                        <li class="text-gray-500 hover:text-black">
                             <a href="javascript:void(0)">Artigos</a>
                         </li>
                     </div>
@@ -71,7 +71,7 @@
               <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                 <a
                   href="javascript:void(0)"
-                  class="block py-2 px-4 text-center text-white font-medium bg-gray-900 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none"
+                  class="block py-2 px-4 text-center text-white font-medium bg-gray-900 duration-150 hover:bg-black active:bg-black rounded-lg shadow-lg hover:shadow-none"
                 >
                   Ver oportunidades
                 </a>
