@@ -278,7 +278,7 @@
       </section>
 
       <!-- component -->
-<footer class="w-full min-h-screen flex items-center justify-center bg-black mt-10">
+<footer class="w-full min-h-screen flex items-center justify-center bg-black mt-10 pt-10">
     <div class="md:w-2/3 w-full px-4 text-white flex flex-col mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-xl">
         <div class="w-full text-7xl font-bold">
             <h3 class="w-full md:w-2/3">Encontre o seu emprego ideal</h3>
