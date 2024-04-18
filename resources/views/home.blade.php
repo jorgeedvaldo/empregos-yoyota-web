@@ -10,49 +10,42 @@
 <body>
     <div x-data="{ state: false }">
 
-        <header>
-            <nav class="items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
-                <div class="flex justify-between">
-                    <a href="javascript:void(0)">
-                        <img
-                            src="https://empregosyoyota.net/storage/images/logo.png"
-                            height="50"
-                            alt="Empregos Yoyota logo"
-                        />
-                    </a>
-                    <button class="text-gray-500 outline-none md:hidden" @click="state = !state">
-                        <template x-if="state">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </template>
-                        <template x-if="!state">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </template>
+      <nav x-data="{ isOpen: false }"  class="border-b dark:border-gray-700">
+        <div class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <img class="w-auto" height="50" src="https://empregosyoyota.net/storage/images/logo.png" alt="">
+                </a>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
+
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
-                <ul :class="{'hidden': !state, 'flex-1': true, 'justify-between': true, 'mt-12': true, 'md:flex': true, 'md:mt-0': true}">
-                    <li class="order-2 pb-5 md:pb-0">
-                        <a href="#" class="py-3 px-6 rounded-md shadow-md text-white text-center bg-gray-900 focus:shadow-none block md:inline">
-                            Oportunidades
-                        </a>
-                    </li>
-                    <div class="order-1 flex-1 justify-center items-center space-y-5 md:flex md:space-x-6 md:space-y-0">
-                        <li class="text-gray-500 hover:text-black">
-                            <a href="javascript:void(0)">Início</a>
-                        </li>
-                        <li class="text-gray-500 hover:text-black">
-                            <a href="javascript:void(0)">Sobre</a>
-                        </li>
-                        <li class="text-gray-500 hover:text-black">
-                            <a href="javascript:void(0)">Artigos</a>
-                        </li>
-                    </div>
-                </ul>
-            </nav>
-        </header>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+                <div class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8">
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#">glasses Search</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#">How it works!</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#">Why us?</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#">Contact</a>
+
+                    <button class="flex items-center justify-center px-5 py-2 text-sm font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                        Get in touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
         <section class="py-28">
           <div
             class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8"
