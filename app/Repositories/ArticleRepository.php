@@ -2,9 +2,10 @@
 
 namespace App\Repositories;
 
+use App\Interfaces\ArticleRepositoryInterface;
 use App\Models\Article;
 
-class ArticleRepository {
+class ArticleRepository implements ArticleRepositoryInterface {
 
     public function __construct(protected Article $model)
     {
