@@ -3,8 +3,9 @@
 namespace App\Repositories;
 
 use App\Models\Job;
+use App\Repositories\JobRepositoryInterface;
 
-class JobRepository {
+class JobRepository implements JobRepositoryInterface {
 
     public function __construct(protected Job $model)
     {
