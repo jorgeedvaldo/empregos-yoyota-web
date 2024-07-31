@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-
     public function __construct(protected JobService $jobService, protected CategoryService  $categoryService, protected ArticleService $articleService)
     {
     }
