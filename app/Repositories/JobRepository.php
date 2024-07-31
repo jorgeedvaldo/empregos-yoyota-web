@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Job;
-use App\Repositories\JobRepositoryInterface;
+use App\Interfaces\JobRepositoryInterface;
 
 class JobRepository implements JobRepositoryInterface {
 
